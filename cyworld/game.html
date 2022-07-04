@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/game.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+    </style>
+
+    <script>
+        const startWord = () => {
+            const word = document.getElementById('word').innerText
+            const lastWord = word[word.length - 1]
+
+            const myword = document.getElementById('myword').value
+            const firstword = myword[0]
+
+            if(firstword === lastWord) {
+                document.getElementById('input_result').innerText = '정답입니다!'
+                document.getElementById('word').innerText = myword
+                document.getElementById('myword').value = ""
+            }else {
+                document.getElementById('input_result').innerText = '이게 같다고?'
+                document.getElementById('myword').value = ""
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper__header">
+            <div class="header__title">
+                <div class="title">GAME</div>
+                <div class="subtitle">TODAY CHOICE</div>
+            </div>
+            <div class="divideLine"></div>
+        </div>
+
+        <!-- 끝말잇기 -->
+        <div class="game__container">
+            <img src="images/word.png" alt="">
+            <div class="game__title">끝말잇기</div>
+            <div class="game__subtitle">제시어 작성 <span id="word">코드캠프</span></div>
+            <div class="word__text">
+                <input id="myword" class="textbox" type="text" placeholder="단어를 입력하세요.">
+                <button onclick="startWord()" class="search">입력</button>
+            </div>
+            <div id="input_result" class="word__result">결과는?</div>
+        </div>
+
+        <!-- 로또 -->
+        <div class="game__container">
+            <img src="images/lotto.png" alt="">
+            <div class="game__title">LOTTO</div>
+            <div class="game__subtitle"></div>
+            <div class="rendom_num" id="rendomNum">
+                <div id="num1">00</div>
+                <div id="num2">00</div>
+                <div id="num3">00</div>
+                <div id="num4">00</div>
+                <div id="num5">00</div>
+                <div id="num6">00</div>
+            </div>
+            <button onclick="lottoBt()">Click!!!</button>
+        </div>
+    </div>
+
+
+
+    <!-- lotto -->
+    <!-- lotto -->
+    <script>
+        let random_num = document.getElementById("rendomNum")
+
+        let num1 = document.getElementById("num1")
+        let num2 = document.getElementById("num2")
+        let num3 = document.getElementById("num3")
+        let num4 = document.getElementById("num4")
+        let num5 = document.getElementById("num5")
+        let num6 = document.getElementById("num6")
+
+        function lottoBt() {
+            document.getElementById("num1").innerText = String(Math.floor(Math.random() * 100)).padStart(2, '0')
+            document.getElementById("num2").innerText = String(Math.floor(Math.random() * 100)).padStart(2, '0')
+            document.getElementById("num3").innerText = String(Math.floor(Math.random() * 100)).padStart(2, '0')
+            document.getElementById("num4").innerText = String(Math.floor(Math.random() * 100)).padStart(2, '0')
+            document.getElementById("num5").innerText = String(Math.floor(Math.random() * 100)).padStart(2, '0')
+            document.getElementById("num6").innerText = String(Math.floor(Math.random() * 100)).padStart(2, '0')
+        }
+    </script>
+
+    <!-- 끝말잇기 -->
+    <!-- 끝말잇기 -->
+    <script>
+        // ??변수로 만들어서 대입하면 오류...
+        // let inputResult = document.getElementById("input_result")
+        // let inputWword = document.getElementById("input_word")
+        // let aaa = document.getElementById("input_word").value
+
+
+
+        // 입력하지 않았을 경우 제시어를 입력해주세요 문구 추가하기
+
+
+        function wordBt() {
+            if (document.getElementById("input_word").value === '') {
+                document.getElementById("input_result").innerText = '제시어를 입력하세요.'
+                document.getElementById("input_result").classList.add('word__caution')
+                document.getElementById("input_result").classList.remove('word__color')
+            } else {
+                document.getElementById("input_result").innerText = document.getElementById("input_word").value
+                document.getElementById("input_result").classList.add('word__color')
+                document.getElementById("input_result").classList.remove('word__caution')
+            }
+
+            // document.getElementById("input_result").classList.add('word__color')
+            // document.getElementById("input_result").classList.remove('word__result')
+            document.getElementById("input_word").value = null;
+        }
+    </script>
+</body>
+
+</html>

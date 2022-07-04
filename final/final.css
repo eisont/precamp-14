@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrap {
+    position: relative;
+    width: 500px;
+    height: 90vh;
+    border: 1px solid #AACDFF;
+    border-radius: 20px;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    /* padding: 50px 104px 12px 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#main {
+    padding: 50px 70px;
+    width: 100%;
+    height: 90vh;
+
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+
+#email, #username, #password, #passwordCH, #phone_ch, #address, #sex {
+    font-size: 10px;
+    color: red;
+    font-weight: 900;
+    text-align: center;
+    opacity: 0;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 32px;
+    color: #0068FF;
+    /* background-color:  #0068FF; */
+}
+
+.section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section>div:nth-child(1) {
+    margin-top: 20px;
+}
+
+.section>div:nth-child(4) {
+    margin-bottom: 20px;
+}
+
+.section>div {
+    margin: 10px 0;
+    width: 100%;
+    color: #797979;
+}
+
+.section div input {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 13px;
+    outline: none;
+    border: 1px solid #0068FF;
+    border-radius: 7px;
+}
+
+
+.section__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__phone .phone_input {
+    justify-content: space-around;
+}
+.section__phone .phone_input input {
+    width: 85px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+
+.section__button {
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.section__button>div {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.section__button>div>button {
+    width: 100px;
+    height: 35px;
+    margin-left: 20px;
+
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    border-radius: 7px;
+    /* color: #0068FF; */
+}
+
+.section__button #auth,
+.section__button #timer {
+    color: #0068FF;
+}
+
+select {
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 5px 0;
+    outline: none;
+    /* background-color: #AACDFF; */
+}
+
+
+.gender_select {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0068FF; */
+}
+
+.gender_select>p:nth-child(1) {
+    margin-right: 15px;
+}
+
+
+
+.joinBt {
+    margin-top: 20px;
+    padding: 10px 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: 1px solid lightgray;
+    /* background-color: #fff; */
+    /* color: #0068FF; */
+}

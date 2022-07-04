@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="final.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="main">
+            <div class="header">
+                <p>코드캠프 회원가입</p>
+            </div>
+
+            <!-- 정보입력 -->
+
+            <div class="section">
+                <div class="email">
+                    <input id="mail" type="email" placeholder="이메일을 입력해주세요.">
+                    <p id="email">이메일이 올바르지 않습니다.</p>
+                </div>
+                <div class="name">
+                    <input id="name" type="name" placeholder="이름을 입력해 주세요..">
+                    <p id="username">이름이 올바르지 않습니다.</p>
+                </div>
+                <div class="password">
+                    <input id="pw1" maxlength="8" type="password" placeholder="비밀번호를 입력해주세요.">
+                    <p id="password">비밀번호를 입력해 주세요.</p>
+                </div>
+                <div class="passwordCH">
+                    <input id="pw2" maxlength="8" type="password" placeholder="비밀번호를 다시 입력해주세요.">
+                    <p id="passwordCH">비밀번호를 입력해주세요.</p>
+                </div>
+            </div>
+
+            <div class="section__phone">
+                <div class="phone_input">
+                    <input id="phone1" oninput="changeFocus1()" placeholder="010" type="text" maxlength="3">-
+                    <input id="phone2" oninput="changeFocus2()" placeholder="0000" type="text" maxlength="4">-
+                    <input id="phone3" oninput="changeFocus3()" placeholder="0000" type="text" maxlength="4">
+                </div>
+                <p id="phone_ch">번호 전체를 입력해주세요.</p>
+            </div>
+
+            <div class="section__button">
+                <div class="section__button1">
+                    <div id="auth">000000</div>
+                    <button id="checkBt_1" onclick="pressedBtn()" disabled>인증번호 전송</button>
+                </div>
+                <div class="section__button2">
+                    <div id="timer">00:00</div>
+                    <button id="finish" disabled>인증완료
+                    </button>
+                </div>
+            </div>
+
+            <!-- 지역선택 -->
+            <select id="sel">
+                <option value="0" id="add_select" selected>지역을 선택하세요.</option>
+                <option value="1">서울</option>
+                <option value="2">인천</option>
+                <option value="3">경기</option>
+                <option disabled>속초</option>
+                <option disabled>강릉</option>
+                <option disabled>부산</option>
+            </select>
+            <p id="address">지역을 선택해 주세요.</p>
+
+            <!-- 성별 -->
+            <div class="gender_select">
+                <p><input type="radio" value="female" name="gender">여성</p>
+                <p><input type="radio" value="male" name="gender">남성</p>
+            </div>
+            <p id="sex">성별을 선택해주세요.</p>
+
+            <button onclick="joinBt()" id="join" class="joinBt" disabled>
+                가입하기
+            </button>
+        </div>
+    </div>
+
+
+    <script src="final.js"></script>
+    <script src="phone.js"></script>
+    <script src="timer.js"></script>
+</body>
+
+</html>

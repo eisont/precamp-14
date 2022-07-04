@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ffcead;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.background {
+    position: fixed;
+    width: 1024px;
+    height: 600px;
+    /* height: 100vh; */
+    overflow: hidden;
+    background-image: url("../images/background.png");
+    background-image: url("../images/짱구_background.jpg");
+    background-size: contain;
+    background-position: right;
+}
+
+.outerbox {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 808px;
+    height: 544px;
+    background-image: url("../images/outerbox.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: absolute;
+    left: 26px;
+    top: 24px;
+    
+    width: 756px;
+    height: 496px;
+    right: 26px;
+    bottom: 24px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    /* background-color: aquamarine; */
+}
+
+.wrapper__left {
+    width: 214px;
+    height: 100%;
+    margin-left: 6px;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    /* background-color: rebeccapurple; */
+}
+
+.wrapper__left__header {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center;
+    background-color: aqua; */
+}
+
+.wrapper__left__header>div {
+    position: absolute;
+    top: 26px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.wrapper__left__header>div>span{
+    font-size: 11px;
+}
+.wrapper__left__header>div>span.zero {
+    letter-spacing: 0;
+    color: #FF0000;
+}
+
+.wrapper__left__body {
+    width: 208px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: white;
+}
+
+.left__body__header {
+    width: 100%;
+    height: 165px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left__body__header__gray {
+    width: 148px;
+    height: 133px;
+    box-shadow: 1px 1px 5px #000;
+    background-color: #298EB5;
+    background-image: url("../images/짱구.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.left__body__header__line {
+    width: 100%;
+    border-bottom: 1px dotted black;
+}
+
+
+.left__body__profile {
+    width: 100%;
+    height: 203px;
+    /* background-color: #55b2d4; */
+}
+
+.left__body__profile>div {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+}
+
+.left__body__profile>div>ion-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.left__body__profile>div>p {
+    margin-left: 9px;
+    cursor: default;
+}
+
+.left__body__footer {
+    width: 100%;
+    height: 72px;
+}
+
+.left__body__footer p {
+    font-size: 11px;
+    color: gray;
+}
+
+.left__body__footer select {
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+
+/* wrapper__right */
+/* wrapper__right */
+.wrapper__right {
+    width: 542px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: cadetblue; */
+}
+
+.wrapper__right__header {
+    padding-bottom: 8px;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* background: #c4c4c4; */
+}
+
+.right__header_left {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 36px;
+    color: #55b2d4;
+    cursor: default;
+}
+
+.right__header_right {
+    padding-right: 26px;
+    font-size: 13px;
+    letter-spacing: -1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    /* background-color: #fff; */
+}
+
+.right__header_right>ion-icon {
+    padding-top: 2px;
+    width: 13px;
+    color: #FF6400;
+}
+
+
+
+
+.wrapper__right__body .G_wrapper, 
+.wrapper__right__body .B_wrapper {
+    display: none;
+}
+.wrapper__right__body.Game .G_wrapper,
+.wrapper__right__body.BGM .B_wrapper{
+    display: block;
+}
+.wrapper__right__body.Home .G_wrapper, 
+.wrapper__right__body.Home .B_wrapper {
+    display: none;
+}
+
+.wrapper__right__body,
+.wrapper__right__body.Home,
+.wrapper__right__body.Game,
+.wrapper__right__body.BGM {
+    position: relative;
+    width: 524px;
+    height: 440px;
+    margin-left: 2px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+
+
+
+.wrapper__header {
+    margin-top: 20px;
+    width: 464px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.H_wrapper .wrapper__header {
+    height: 48px;
+}
+.G_wrapper .wrapper__header,
+.B_wrapper .wrapper__header {
+    height: 25px;
+}
+.H_wrapper .wrapper__header p,
+.H_wrapper .wrapper__body p,
+.G_wrapper .wrapper__header p,
+.B_wrapper .wrapper__header p,
+.B_wrapper .wrapper__body .footer p  {
+    color: #55b2d4;
+    font-weight: 600;
+    font-size: 13px;
+}
+.H_wrapper .wrapper__header span,
+.H_wrapper .wrapper__body span,
+.G_wrapper .wrapper__header span,
+.B_wrapper .wrapper__header span  {
+    font-size: 8px;
+    margin-left: 7px;
+    color: #000;
+}
+.H_wrapper .wrapper__header>div,
+.G_wrapper .wrapper__header>div,
+.B_wrapper .wrapper__header>div {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+
+
+/* H_wrapper */
+/* H_wrapper */
+.H_wrapper .wrapper__header ul li {
+    font-weight: 600;
+    color: gray;
+    font-size: 11px;
+}
+
+
+.wrapper__body {
+    width: 464px;
+    height: 391px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.H_wrapper .wrapper__body {
+    position: absolute;
+    align-items: flex-start;
+    bottom: 26px;
+    height: 270px;
+}
+
+.H_wrapper .wrapper__body > iframe {
+    width: 464px;
+    height: 240px;
+    background: #c4c4c4;
+}
+
+
+
+/* G_wrapper */
+/* G_wrapper */
+.wrapper__right__body.Game .H_wrapper, 
+.wrapper__right__body.Game .B_wrapper {
+    display: none;
+}
+
+.G_wrapper .wrapper__body .game__container {
+    width: 222px;
+    height: 168px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    background-color: #f6f6f6;
+    font-family: 'Jua', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 20px 20px 20px;
+}
+.G_wrapper .wrapper__body .game__container img {
+    height: 40px;
+}
+.G_wrapper .wrapper__body .game__title {
+    font-size: 18px;
+    font-weight: 900;
+}
+.G_wrapper .wrapper__body .word__text input{
+    padding: 0 5px;
+    width: 136px;
+    height: 24px;
+    font-size: 11px;
+    font-family: 'Jua', sans-serif;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.G_wrapper .wrapper__body .game__container button {
+    height: 24px;
+    padding: 3px 5px;
+    font-size: 11px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.G_wrapper .wrapper__body .game__container button:hover {
+    background-color: #000;
+    color: rgb(208, 208, 208);
+}
+.G_wrapper .wrapper__body .game__container button:active {
+    color: #fff;
+}
+
+.G_wrapper .wrapper__body .game__subtitle,
+.G_wrapper .wrapper__body .word__result {
+    font-size: 11px; 
+    font-weight: 700;
+    color: #999999;
+}
+.G_wrapper .wrapper__body .word__result.word__caution{color: red;}
+.G_wrapper .wrapper__body .word__result.word__color{color: #000;}
+
+.G_wrapper .wrapper__body .rendom_num {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #FFE400;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* B_wrapper */
+/* B_wrapper */
+.wrapper__right__body.BGM .G_wrapper, 
+.wrapper__right__body.BGM .H_wrapper {
+    display: none;
+}
+
+.B_wrapper .wrapper__body > .musicBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.B_wrapper .wrapper__body > .musicBox > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: default;
+}
+.B_wrapper .wrapper__body > .musicBox img {
+    width: 120px;
+    height: 120px;
+    box-shadow: 1px 3px 5px #000;
+    transition: 0.2s;
+}
+.B_wrapper .wrapper__body > .musicBox img:hover {
+    box-shadow: 3px 3px 5px #444;
+}
+.B_wrapper .wrapper__body > .musicBox .title {
+    margin-top: 10px;
+    font-size: 13px;
+}
+.B_wrapper .wrapper__body > .musicBox .singer {
+    color: #999;
+}
+
+
+.B_wrapper .wrapper__body .footer {
+    width: 464px;
+    /* border: 1px solid #000; */
+}
+.B_wrapper .wrapper__body .footer span {
+    font-size: 16px;
+    color: #000;
+}
+.B_wrapper .wrapper__body .footer .musicList {
+    margin-top: 9px;
+    height: 120px;
+    border: 1px solid #000;
+}
+
+
+
+
+
+.out__menu {
+    position: absolute;
+    right: -68px;
+    width: 70px;
+    height: 100%;
+    z-index: 10;
+    transform: translateX(2px);
+    /* background-color: #FF0000; */
+}
+.out__menu a {
+    position: absolute;
+    height: 35px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #298EB5;
+    transition: 0.2s;
+    border: 1px solid #000;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.out__menu a.home{
+    top: 10px;
+    width: 100%;
+}
+.out__menu a.game{
+    top: 50px;
+    width: 100%;
+}
+.out__menu a.BGM{
+    top: 90px;
+    width: 100%;
+}
+
+.out__menu a.home:hover,
+.out__menu a.game:hover,
+.out__menu a.BGM:hover{
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+}

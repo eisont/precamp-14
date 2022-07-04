@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.H_wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.H_wrapper .wrapper__header {
+    position: relative;
+    margin-top: 20px;
+    width: 464px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.H_wrapper .wrapper__header p,
+.H_wrapper .wrapper__body p {
+    color: #55b2d4;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.H_wrapper .wrapper__header span,
+.H_wrapper .wrapper__body span {
+    font-size: 8px;
+    margin-left: 7px;
+    color: #000;
+}
+
+.H_wrapper .wrapper__header>div {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+.H_wrapper .wrapper__header p:nth-child(3) {
+    font-weight: 600;
+    color: gray;
+    font-size: 11px;
+}
+
+.H_wrapper .wrapper__body {
+    margin-bottom: 26px;
+    width: 464px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.H_wrapper .wrapper__body iframe {
+    width: 464px;
+    height: 240px;
+    background: #c4c4c4;
+}
